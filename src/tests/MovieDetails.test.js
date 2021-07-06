@@ -19,7 +19,7 @@ const renderPath = (path) => {
   return { ...resources };
 };
 
-describe('4 - Faça uma requisição para buscar o filme que deverá ser renderizado dentro de `Movie Details`', () => {
+describe.only('4 - Faça uma requisição para buscar o filme que deverá ser renderizado dentro de `Movie Details`', () => {
 
   it('Será validado se `MovieDetails` exibe o texto "Carregando..." enquanto estiver fazendo a requisição', async () => {
     for (const movie of readMovies()) {

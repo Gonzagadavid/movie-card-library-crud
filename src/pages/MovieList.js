@@ -3,7 +3,7 @@ import MovieCard from '../components/MovieCard';
 import { Loading } from '../components';
 import './movieList.css';
 
-import * as movieAPI from '../services/movieAPI';
+import { getMovies } from '../services/movieAPI';
 
 class MovieList extends Component {
   constructor() {
@@ -13,16 +13,16 @@ class MovieList extends Component {
       movies: [],
       loading: true,
     };
-    this.FecthMovies = this.FecthMovies.bind(this);
+    this.getAllMovies = this.getAllMovies.bind(this);
   }
 
   componentDidMount() {
-    this.FecthMovies();
+    this.getAllMovies();
   }
 
-  FecthMovies() {
+  getAllMovies() {
     this.setState({ loading: true }, async () => {
-      const movies = await movieAPI.getMovies();
+      const movies = await getMovies();
       this.setState({
         loading: false, movies,
       });
