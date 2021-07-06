@@ -1,15 +1,15 @@
 .movie-card {
+  align-items: center;
   background-color: white;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid black;
   border-radius: 3px;
+  box-shadow: 2px 2px 2px black;
   display: flex;
   flex-direction: column;
   height: 450px;
   margin: 15px 5px;
   overflow: hidden;
   width: 300px;
-  align-items: center;
-  box-shadow: 2px 2px 2px black;
 }
 
 .movie-card-header {
